@@ -7,7 +7,11 @@ public class PlayerMovement : MonoBehaviour
 {
 	public static PlayerMovement instance;
 	public Rigidbody2D myRigid;
+<<<<<<< HEAD
+    public Animation anim;
+=======
     public Animator animator;
+>>>>>>> a2e3174dc98b76676eed3b2b7db9ef99c48cd45c
 
 	private float xMove;
 	private float yMove;
@@ -20,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 	void Update()
 	{
 		playerController();
+        anim = GetComponent<Animation>();
 	}
 	
 	
