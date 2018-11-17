@@ -42,6 +42,7 @@ public class EnemyAI_Cyan : MonoBehaviour
 
     void SpawnTears()
     {
+        Audio.PlaySound("8BIT_RETRO_Hit_Bump_Thump_mono");
         Instantiate(deathTear_1, transform.position, transform.rotation);
         Instantiate(deathTear_2, transform.position, transform.rotation);
         Instantiate(deathTear_3, transform.position, transform.rotation);
