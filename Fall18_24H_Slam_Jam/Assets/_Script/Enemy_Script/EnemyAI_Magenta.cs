@@ -20,7 +20,7 @@ public class EnemyAI_Magenta : MonoBehaviour {
         tran_EnemyM.Translate(Vector3.right * Time.deltaTime * speed_EnemyM);
     }
 
-    private void OnCollisionStay2D(Collision2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
         /*    Bounce    */
         if (col.gameObject.tag == "Border")

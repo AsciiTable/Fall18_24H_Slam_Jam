@@ -31,7 +31,7 @@ public class EnemyAI_Cyan : MonoBehaviour
         tran_EnemyC.Translate(Vector3.right * Time.deltaTime * speed_EnemyC);
     }
 
-    private void OnCollisionStay2D(Collision2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
         /*    Patrol    */
         if (col.gameObject.tag == "Border")
