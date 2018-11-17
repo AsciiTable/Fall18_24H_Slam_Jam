@@ -8,18 +8,18 @@ public class Weapon : MonoBehaviour
 	public float fireRate = 0;
 	public float Damage = 10;
 	public LayerMask whatToHit;
-
+ 
 	private float timeToFire = 0;
 	private Transform firePoint;
 
 	// Use this for initialization
 	void Awake ()
 	{
-<<<<<<< HEAD
+
 		firePoint = transform.GetChild(0);
-=======
+
 		firePoint = transform.Find("FirePoint");
->>>>>>> a25557c90e938c77d229727e6ed7e31bbb536b48
+
 		if (firePoint == null)
 		{
 			Debug.LogError("No firepoint? NANIII??");
