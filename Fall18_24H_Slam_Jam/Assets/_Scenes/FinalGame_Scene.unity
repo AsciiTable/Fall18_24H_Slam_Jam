@@ -2534,6 +2534,24 @@ MonoBehaviour:
   Yellow_Max: 10
   Gun_Color: 1
   HPText: {fileID: 0}
+--- !u!95 &1839474109
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839474102}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03d60ea66d38a52488e906ebac22ca62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1840728248
 Prefab:
   m_ObjectHideFlags: 0
@@ -2589,6 +2607,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114422645030356792, guid: 87a87f83472dcc541b90096afd73b171,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1839474109}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a87f83472dcc541b90096afd73b171, type: 2}
   m_IsPrefabAsset: 0
