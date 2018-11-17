@@ -270,6 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 888896979}
   - component: {fileID: 888896978}
+  - component: {fileID: 888896980}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -385,6 +386,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888896980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888896977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d411c240dfcc3b438a52efe8d62f9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141792010
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +749,8 @@ MonoBehaviour:
   whatToHit:
     serializedVersion: 2
     m_Bits: 55
+  BulletTrailPrefab: {fileID: 0}
+  effectSpawnRate: 10
 --- !u!61 &1435257395
 BoxCollider2D:
   m_ObjectHideFlags: 0
