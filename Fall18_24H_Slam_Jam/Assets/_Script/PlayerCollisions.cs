@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerCollisions : MonoBehaviour {
 
     public float CheckpointHP_Player = 10.0f;
-    public int HP_Player = 6;
+    public float HP_Player = 6;
     public bool isSad = false;
 
     public int Magenta_Bar = 0;
@@ -19,11 +20,23 @@ public class PlayerCollisions : MonoBehaviour {
 
     public int Gun_Color = 1;
 
-	void Start () {
-		
-	}
-	
-	void Update () {
+    public Text HPText;
+
+    private float TotalHP;
+
+    void Start()
+    {
+
+        
+
+        GameObject HPBar = GameObject.Find("HPBar");
+        HPText = HPBar.GetComponent<Text>();
+
+        
+
+    }
+
+    void Update () {
 
 
         if(Input.GetButtonDown("GunColorM"))
@@ -67,7 +80,11 @@ public class PlayerCollisions : MonoBehaviour {
         {
             SceneManager.LoadScene("GameOver");
         }
-	}
+
+        TotalHP = (HP_Player - 1) + (CheckpointHP_Player / 10);
+        HPText.text = "Health: " + TotalHP.ToString();
+
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
