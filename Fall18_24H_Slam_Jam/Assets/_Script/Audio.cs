@@ -1,25 +1,43 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Audio : MonoBehaviour
 {
 
-	public AudioClip JumpSFX;
+	public static  AudioClip EnemyBumpSFX;
 
-	public AudioSource MusicSource;
+	public static AudioClip ShootSFX;
+
+	static AudioSource MusicSource;
 
 	// Use this for initialization
 	void Start ()
 	{
-		MusicSource.clip = JumpSFX;
+		EnemyBumpSFX = Resources.Load<AudioClip>("8BIT_RETRO_Hit_Bump_Thump_mono");
+		ShootSFX = Resources.Load<AudioClip>("twinkle_shoot");
+		MusicSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space))
+	}
+
+	public static void PlaySound(string clip)
+	{
+		switch (clip)
 		{
-			MusicSource.Play();
+			case "8BIT_RETRO_Hit_Bump_Thump_mono":
+				MusicSource.PlayOneShot(EnemyBumpSFX);
+				break;
+			case "twinkle_shoot":
+				MusicSource.PlayOneShot(ShootSFX);
+				break;
+			default:
+				break;
 		}
+
+
 	}
 }

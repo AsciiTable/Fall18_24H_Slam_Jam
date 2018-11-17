@@ -31,7 +31,7 @@ public class EnemyAI_Cyan : MonoBehaviour
         tran_EnemyC.Translate(Vector3.right * Time.deltaTime * speed_EnemyC);
     }
 
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         /*    Patrol    */
         if (col.gameObject.tag == "Border")
@@ -42,6 +42,7 @@ public class EnemyAI_Cyan : MonoBehaviour
 
     void SpawnTears()
     {
+        Audio.PlaySound("8BIT_RETRO_Hit_Bump_Thump_mono");
         Instantiate(deathTear_1, transform.position, transform.rotation);
         Instantiate(deathTear_2, transform.position, transform.rotation);
         Instantiate(deathTear_3, transform.position, transform.rotation);
