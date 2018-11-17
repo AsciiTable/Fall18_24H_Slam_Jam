@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	public static PlayerMovement instance;
 	public Rigidbody2D myRigid;
+    public Animator animator;
 
 	private float xMove;
 	private float yMove;
@@ -29,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
 		//it will then store the value into xMove
 		xMove = Input.GetAxis("Horizontal")*speed;
 		yMove = Input.GetAxis("Vertical") * speed;
+
+        float animove = xMove + yMove;
+
+        animator.SetFloat("Speed", Mathf.Abs(animove));
 
 		if (xMove < 0 && facingRight)
 		{
