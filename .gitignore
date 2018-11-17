@@ -34,3 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+.idea
+Assets/Plugins/Editor/JetBrains
+Plugins/Editor/JetBrains.meta
+Fall18_24H_Slam_Jam/Assets/Plugins/Editor/JetBrains/
+Fall18_24H_Slam_Jam/Assets/Plugins/Editor.meta
+Fall18_24H_Slam_Jam/Assets/Plugins/Editor/JetBrains.meta
