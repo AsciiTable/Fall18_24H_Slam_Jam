@@ -12,6 +12,7 @@ public class ArmRotation : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		
 		//subtracting the position of the player from the mouse position
 		Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 		
@@ -20,8 +21,15 @@ public class ArmRotation : MonoBehaviour
 		
 		//find the angle in degrees
 		float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+
+		//Debug.Log(rotZ);
+		
+
+		
 		transform.rotation = Quaternion.Euler(0f, 0f, rotZ 
 		                                              + rotationOffset 
 													   + ((playerMove.facingRight)? 0 : -180f));
+		
+		//playerMove.facingRight = (rotZ > 180 || rotZ < 0);
 	}
 }

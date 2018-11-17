@@ -78,10 +78,21 @@ public class Weapon : MonoBehaviour
 
 	void Effect()
 	{
-		GameObject go = GameObject.Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
+		GameObject go = GameObject.Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);//* Quaternion.Euler(0f,0f,180f)
+		//go.transform.localRotation = Quaternion.Euler()
+//		//subtracting the position of the player from the mouse position
+//		Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+//		//normalizing the vector meaning that all the sum of the vector will be equal to 1
+//		difference.Normalize();
+//		//find the angle in degrees
+//		float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+//		transform.rotation = Quaternion.Euler(0f, 0f, rotZ);
+		
 //			(playerMovement.facingRight) ? firePoint.rotation : 
 //				Quaternion.Euler(0f,0f,180f) *firePoint.rotation);
 		MoveBulletTrail bullet = go.GetComponent<MoveBulletTrail>();
-		bullet.velocity = (playerMovement.facingRight) ? bullet.transform.right : -bullet.transform.right;
+		bullet.velocity = firePoint.right * ((playerMovement.facingRight) ? 1 : -1);
 	}
+	
+	
 }
