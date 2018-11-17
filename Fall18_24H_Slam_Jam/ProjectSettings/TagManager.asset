@@ -8,6 +8,7 @@ TagManager:
   - Deathness
   - Enemy
   - Sadness
+  - Weapon
   layers:
   - Default
   - TransparentFX

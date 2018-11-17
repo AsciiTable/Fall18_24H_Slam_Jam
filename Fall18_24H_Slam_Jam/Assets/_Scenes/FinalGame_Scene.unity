@@ -2612,6 +2612,16 @@ Prefab:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1839474109}
+    - target: {fileID: 212351080286452644, guid: 87a87f83472dcc541b90096afd73b171,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 295749955
+      objectReference: {fileID: 0}
+    - target: {fileID: 212351080286452644, guid: 87a87f83472dcc541b90096afd73b171,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a87f83472dcc541b90096afd73b171, type: 2}
   m_IsPrefabAsset: 0
