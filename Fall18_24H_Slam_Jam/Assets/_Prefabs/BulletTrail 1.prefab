@@ -82,7 +82,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98c9eb49c0cf574f9a2d1060b944d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 150
+  fireDirection: 1
+  moveSpeed: 50
+  velocity: {x: 0, y: 0, z: 0}
 --- !u!120 &120489416852862576
 LineRenderer:
   m_ObjectHideFlags: 1
