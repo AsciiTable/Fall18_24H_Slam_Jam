@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Border
+  - Deathness
+  - Enemy
+  - Sadness
   layers:
   - Default
   - TransparentFX
@@ -15,8 +18,8 @@ TagManager:
   - 
   - 
   - Player
-  - 
-  - 
+  - Deathness
+  - Enemies
   - 
   - 
   - 
