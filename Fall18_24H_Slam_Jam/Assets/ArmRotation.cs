@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ArmRotation : MonoBehaviour
 {
-
+	public PlayerMovement playerMove;
 	public int rotationOffset = 0;
  
 	
@@ -20,6 +20,8 @@ public class ArmRotation : MonoBehaviour
 		
 		//find the angle in degrees
 		float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-		transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotationOffset);
+		transform.rotation = Quaternion.Euler(0f, 0f, rotZ 
+		                                              + rotationOffset 
+													   + ((playerMove.facingRight)? 0 : -180f));
 	}
 }

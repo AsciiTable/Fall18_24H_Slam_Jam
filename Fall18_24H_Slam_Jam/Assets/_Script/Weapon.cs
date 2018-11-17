@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-
+	public PlayerMovement playerMovement;
 	public float fireRate = 0;
 	public float Damage = 10;
 	public LayerMask whatToHit;
 
-	public Transform BulletTrailPrefab;
+	public GameObject BulletTrailPrefab;
 	private float timeToSpawnEffect = 0;
 	public float effectSpawnRate = 10;
  
@@ -78,6 +78,10 @@ public class Weapon : MonoBehaviour
 
 	void Effect()
 	{
-		Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
+		GameObject go = GameObject.Instantiate(BulletTrailPrefab, firePoint.position, firePoint.rotation);
+//			(playerMovement.facingRight) ? firePoint.rotation : 
+//				Quaternion.Euler(0f,0f,180f) *firePoint.rotation);
+		MoveBulletTrail bullet = go.GetComponent<MoveBulletTrail>();
+		bullet.velocity = (playerMovement.facingRight) ? bullet.transform.right : -bullet.transform.right;
 	}
 }
