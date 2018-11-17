@@ -9,11 +9,14 @@ public class EnemyAI_Yellow : MonoBehaviour {
     public float speed_EnemyY = 1;
     public PlayerCollisions PlayerCollisions_Y;
 
+    public SpriteRenderer SpriteRenderer_Y;
+
     void Awake()
     {
         GameObject Player = GameObject.Find("Player");
         tran_Player = Player.GetComponent<Transform>();
         tran_EnemyY = GetComponent<Transform>();
+        SpriteRenderer_Y = GetComponent<SpriteRenderer>();
 
         PlayerCollisions_Y = Player.GetComponent<PlayerCollisions>();
     }
@@ -28,6 +31,18 @@ public class EnemyAI_Yellow : MonoBehaviour {
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.eulerAngles = transform.eulerAngles;
+
+        if (transform.rotation.eulerAngles.z > 90 && transform.rotation.eulerAngles.z < 270)
+        {
+            SpriteRenderer_Y.flipY = true;
+            SpriteRenderer_Y.flipX = true;
+
+        }
+        else
+        {
+            SpriteRenderer_Y.flipY = false;
+            SpriteRenderer_Y.flipX = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)

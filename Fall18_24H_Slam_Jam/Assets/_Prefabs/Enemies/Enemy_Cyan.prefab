@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50378543260308540}
   - component: {fileID: 114574222975168536}
   - component: {fileID: 58601343496875190}
+  - component: {fileID: 95709555148965058}
   m_Layer: 10
   m_Name: Enemy_Cyan
   m_TagString: Deathness
@@ -38,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 1168963447853254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,7 +78,25 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.3
+--- !u!95 &95709555148965058
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1168963447853254}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 400cd74c946a4d34892454a1e3d569ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114574222975168536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +117,7 @@ MonoBehaviour:
     type: 2}
   tearCooldown_EnemyC: 5
   speed_EnemyC: 5
+  PlayerCollisions_C: {fileID: 0}
 --- !u!212 &212078536019943944
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -130,10 +150,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -922949277
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1a834212f0360094081bb0bc51b885cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ca7655de3bdf32468ff905e1ab1f6f7, type: 3}
   m_Color: {r: 0, g: 0.9813695, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

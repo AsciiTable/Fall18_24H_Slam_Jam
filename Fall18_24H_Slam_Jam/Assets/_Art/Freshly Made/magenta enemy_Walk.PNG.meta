@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: 2ba034918e98c3c49ad165dd66edea73
+guid: 13b85475164bef1409ecb3d94ee55c37
 TextureImporter:
   fileIDToRecycleName:
-    21300000: MC_Arm_Spreadsheet_0
-    21300002: MC_Arm_Spreadsheet_1
-    21300004: MC_Arm_Spreadsheet_2
+    21300000: magenta enemy_Walk_0
+    21300002: magenta enemy_Walk_1
+    21300004: magenta enemy_Walk_2
+    21300006: magenta enemy_Walk_3
+    21300008: magenta enemy_Walk_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -46,10 +48,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.41130185, y: 0.60491174}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 514, y: 366, z: 416, w: 180}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -87,61 +89,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_Arm_Spreadsheet_0
+      name: magenta enemy_Walk_0
       rect:
         serializedVersion: 2
-        x: 512
-        y: 359
-        width: 357
-        height: 182
+        x: 159
+        y: 68
+        width: 443
+        height: 577
       alignment: 9
-      pivot: {x: 0.06268413, y: 0.38963202}
+      pivot: {x: 0.47972447, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b14245d1341fff4c9b5720ebde5979b
+      spriteID: 259b946af8c358b419844ef9e637f4ac
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_Arm_Spreadsheet_1
+      name: magenta enemy_Walk_1
       rect:
         serializedVersion: 2
-        x: 668
-        y: 359
-        width: 10
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 875
+        y: 64
+        width: 483
+        height: 562
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2e50e76db7ca614dad9f71edbaf329b
+      spriteID: 0f966c05bb3c2a043a77ef1dd19e8622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_Arm_Spreadsheet_2
+      name: magenta enemy_Walk_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3
-        width: 356
-        height: 182
+        x: 1576
+        y: 68
+        width: 511
+        height: 533
       alignment: 9
-      pivot: {x: 0.030197155, y: 0.3763412}
+      pivot: {x: 0.5, y: 0.35}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 383cad45045832b469e96cd012fb3e5f
+      spriteID: d2211a77cf40af148a9037af122d7a7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magenta enemy_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 69
+        width: 605
+        height: 490
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66920df5a7ae14942910acf26ff169dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magenta enemy_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 3016
+        y: 68
+        width: 511
+        height: 533
+      alignment: 9
+      pivot: {x: 0.5, y: 0.35}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeb00cc9e8ca5f48bd98d29ba33ed0f
       vertices: []
       indices: 
       edges: []
@@ -149,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: f45573d787ffac643addd77a865fc770
+    spriteID: cedea64c0b7024948a194497e677bf9f
     vertices: []
     indices: 
     edges: []

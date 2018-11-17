@@ -9,6 +9,8 @@ public class EnemyAI_Magenta : MonoBehaviour {
     public float speed_EnemyM = 8;
     public float targetOffset_EnemyM = 30;
 
+    public SpriteRenderer SpriteRenderer_M;
+
     public PlayerCollisions PlayerCollisions_M;
 
 
@@ -17,11 +19,25 @@ public class EnemyAI_Magenta : MonoBehaviour {
         tran_Player = Player.GetComponent<Transform>();
         tran_EnemyM = GetComponent<Transform>();
         PlayerCollisions_M = GetComponent<PlayerCollisions>();
+        SpriteRenderer_M = GetComponent<SpriteRenderer>();
     }
 	
 	void Update () {
     /*    Movement    */
         tran_EnemyM.Translate(Vector3.right * Time.deltaTime * speed_EnemyM);
+
+        if (transform.rotation.eulerAngles.z > 90 && transform.rotation.eulerAngles.z < 270)
+        {
+            SpriteRenderer_M.flipY = true;
+            SpriteRenderer_M.flipX = true;
+
+        }
+        else
+        {
+            SpriteRenderer_M.flipY = false;
+            SpriteRenderer_M.flipX = true;
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D col)
