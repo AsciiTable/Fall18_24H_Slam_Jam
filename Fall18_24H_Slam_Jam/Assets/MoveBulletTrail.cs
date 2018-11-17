@@ -8,18 +8,12 @@ public class MoveBulletTrail : MonoBehaviour
 	public int moveSpeed = 230;
 	public Vector3 velocity;
 
-//	void Start()
-//	{
-//		if (fireDirection == Vector3.zero)
-//		{
-//			//fireDirection = transform.right;
-//		}
-//	}
-	
+
 	// Update is called once per frame
-	void Update () 
+	void Update ()
 	{
-		transform.Translate(velocity * Time.deltaTime * moveSpeed);
+		transform.position += velocity * Time.deltaTime * moveSpeed;
+		//transform.Translate(velocity * Time.deltaTime * moveSpeed);
 		Destroy(gameObject, 1);
 	}
 }
