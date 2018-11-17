@@ -10,8 +10,10 @@ public class Enemy_Movement : MonoBehaviour {
     public float targetOffset_Enemy = 30;
 
 	void Awake () {
+        GameObject Player = GameObject.Find("Player");
+        tran_Player = Player.GetComponent<Transform>();
         tran_Enemy = GetComponent<Transform>();
-	}
+    }
 	
 	void Update () {
     /*    Movement    */
