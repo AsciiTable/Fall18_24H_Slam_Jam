@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,17 +10,17 @@ public class PlayerMovement : MonoBehaviour
 	private float xMove;
 	private float yMove;
 	public float speed = 10;
-	
-	// Use this for initialization
-	void Start () {
-		
-	}
+
+	private bool facingRight = true;
+
 	
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		playerController();
 	}
-
+	
+	
 	void playerController()
 	{
 		//This will get the input of the player based
@@ -32,6 +33,17 @@ public class PlayerMovement : MonoBehaviour
 		//and give it values based on the buttons pressed (x and y values)
 		myRigid.velocity = new Vector2(xMove, yMove);
 		
-
+		
 	}
+
+	void Flip()
+	{
+		facingRight = !facingRight;
+
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
+
 }

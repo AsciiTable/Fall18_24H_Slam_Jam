@@ -6,7 +6,7 @@ using UnityEngine;
 public class ArmRotation : MonoBehaviour
 {
 
-	public int rotationOffset = 90;
+	public int rotationOffset = 0;
 	
 	// Update is called once per frame
 	void Update ()

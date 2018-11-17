@@ -65,11 +65,11 @@ public class Weapon : MonoBehaviour
 			timeToSpawnEffect = Time.time + 1 / effectSpawnRate;
 		}
 	
-		Debug.DrawLine(firePointPosition, (mousePosition-firePointPosition)*100, Color.cyan);
+		//Debug.DrawLine(firePointPosition, (mousePosition-firePointPosition)*100, Color.cyan);
 		
 		if (hit.collider != null)
 		{
-			Debug.DrawLine(firePointPosition, hit.point, Color.red);
+			//Debug.DrawLine(firePointPosition, hit.point, Color.red);
 			Debug.Log("We hit " + hit.collider.name + " and did " + Damage + " damage");
 		}
 	}

@@ -4,6 +4,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: MC_Arm_Spreadsheet_0
     21300002: MC_Arm_Spreadsheet_1
+    21300004: MC_Arm_Spreadsheet_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,6 +122,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e2e50e76db7ca614dad9f71edbaf329b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC_Arm_Spreadsheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 356
+        height: 182
+      alignment: 9
+      pivot: {x: 0.030197155, y: 0.3763412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383cad45045832b469e96cd012fb3e5f
       vertices: []
       indices: 
       edges: []
