@@ -13,16 +13,33 @@ public class PlayerCollisions : MonoBehaviour {
     public int Cyan_Bar = 0;
     public int Yellow_Bar = 0;
 
-    private int Magenta_Max = 20;
-    private int Cyan_Max = 15;
-    private int Yellow_Max = 10;
+    public int Magenta_Max = 20;
+    public int Cyan_Max = 15;
+    public int Yellow_Max = 10;
+
+    public int Gun_Color = 1;
 
 	void Start () {
 		
 	}
 	
 	void Update () {
-		if (isSad)
+
+
+        if(Input.GetButtonDown("GunColorM"))
+        {
+            Gun_Color = 1;
+        }
+        if (Input.GetButtonDown("GunColorC"))
+        {
+            Gun_Color = 2;
+        }
+        if (Input.GetButtonDown("GunColorY"))
+        {
+            Gun_Color = 3;
+        }
+
+        if (isSad)
         {
             CheckpointHP_Player -= 0.1f;
             Debug.Log("is Sad");
@@ -74,4 +91,5 @@ public class PlayerCollisions : MonoBehaviour {
 
         }
     }
+
 }
