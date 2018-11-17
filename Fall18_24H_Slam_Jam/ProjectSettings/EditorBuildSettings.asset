@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/_UI/TitleScene.unity
+    guid: 0fedb6050a4e6e343a1f30c399c66b49
+  - enabled: 1
+    path: Assets/_Scenes/Jessica_Sound.unity
+    guid: 7f4e29cfb4b6a474b94e43864312b0f3
   m_configObjects: {}
