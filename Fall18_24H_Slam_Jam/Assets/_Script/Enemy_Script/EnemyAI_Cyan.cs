@@ -14,12 +14,14 @@ public class EnemyAI_Cyan : MonoBehaviour
 
     public float tearCooldown_EnemyC = 5;
     public float speed_EnemyC = 5;
+    public PlayerCollisions PlayerCollisions_C;
 
     void Awake()
     {
         GameObject Player = GameObject.Find("Player");
         tran_Player = Player.GetComponent<Transform>();
         tran_EnemyC = GetComponent<Transform>();
+        PlayerCollisions_C = Player.GetComponent<PlayerCollisions>();
 
         /*  Tears   */
         InvokeRepeating("SpawnTears", tearCooldown_EnemyC, tearCooldown_EnemyC);
@@ -37,6 +39,15 @@ public class EnemyAI_Cyan : MonoBehaviour
         if (col.gameObject.tag == "Border")
         {
             tran_EnemyC.Rotate(Vector3.forward * 180f);
+        }
+
+        if (col.gameObject.tag == "Weapon" && PlayerCollisions_C.Gun_Color == 2)
+        {
+            Destroy(gameObject);
+            if (PlayerCollisions_C.Cyan_Bar < PlayerCollisions_C.Cyan_Max)
+            {
+                PlayerCollisions_C.Cyan_Bar++;
+            }
         }
     }
 
