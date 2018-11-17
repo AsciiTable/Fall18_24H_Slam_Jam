@@ -16,12 +16,17 @@ public class EnemyAI_Cyan : MonoBehaviour
     public float speed_EnemyC = 5;
     public PlayerCollisions PlayerCollisions_C;
 
+    public SpriteRenderer SpriteRenderer_C;
+
     void Awake()
     {
         GameObject Player = GameObject.Find("Player");
         tran_Player = Player.GetComponent<Transform>();
         tran_EnemyC = GetComponent<Transform>();
         PlayerCollisions_C = Player.GetComponent<PlayerCollisions>();
+        SpriteRenderer_C = GetComponent<SpriteRenderer>();
+
+
 
         /*  Tears   */
         InvokeRepeating("SpawnTears", tearCooldown_EnemyC, tearCooldown_EnemyC);
@@ -31,6 +36,19 @@ public class EnemyAI_Cyan : MonoBehaviour
     {
         /*    Movement    */
         tran_EnemyC.Translate(Vector3.right * Time.deltaTime * speed_EnemyC);
+
+        if (transform.rotation.eulerAngles.z > 170)
+        {
+            SpriteRenderer_C.flipY = true;
+            SpriteRenderer_C.flipX = true;
+
+        }
+        else
+        {
+            SpriteRenderer_C.flipY = false;
+            SpriteRenderer_C.flipX = true;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
