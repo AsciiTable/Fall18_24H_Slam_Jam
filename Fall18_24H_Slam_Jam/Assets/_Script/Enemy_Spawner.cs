@@ -6,6 +6,10 @@ public class Enemy_Spawner : MonoBehaviour {
 
     public float Startup_Spawner = 1.0f;
     public float Cooldown_Spawner = 1.0f;
+
+    public float topScreen;
+    public float bottomScreen;
+
     public GameObject[] enemies;
 
     private Enemy_WaveController EnemyMovement_WaveController;
@@ -32,7 +36,9 @@ public class Enemy_Spawner : MonoBehaviour {
         {
             int enemyIndex = Random.Range(0, enemies.Length);
             Debug.Log(enemyIndex);
-            Instantiate(enemies[enemyIndex], transform.position, transform.rotation);
+
+            Vector3 spawnSpot = new Vector3(transform.position.x, Random.Range(bottomScreen,topScreen), 0f);
+            Instantiate(enemies[enemyIndex], spawnSpot, transform.rotation);
             EnemyMovement_WaveController.spawnCount -= 1;
         }
     }

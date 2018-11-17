@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Movement : MonoBehaviour {
+public class EnemyAI_Red : MonoBehaviour {
 
-    private Transform tran_Enemy;
+    private Transform tran_EnemyR;
     public Transform tran_Player;
-    public float speed_Enemy = 15;
+    public float speed_EnemyR = 8;
     public float targetOffset_Enemy = 30;
 
 	void Awake () {
         GameObject Player = GameObject.Find("Player");
         tran_Player = Player.GetComponent<Transform>();
-        tran_Enemy = GetComponent<Transform>();
+        tran_EnemyR = GetComponent<Transform>();
     }
 	
 	void Update () {
     /*    Movement    */
-        tran_Enemy.Translate(Vector3.right * Time.deltaTime * speed_Enemy);
+        tran_EnemyR.Translate(Vector3.right * Time.deltaTime * speed_EnemyR);
     }
 
     private void OnCollisionStay2D(Collision2D col)
