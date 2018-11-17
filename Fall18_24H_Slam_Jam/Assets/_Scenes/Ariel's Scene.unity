@@ -161,8 +161,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.06268413, y: 0.38963202}
-    oldSize: {x: 3.57, y: 1.82}
+    pivot: {x: 0.029915225, y: 0.36364582}
+    oldSize: {x: 3.56, y: 1.69}
     newSize: {x: 3.74, y: 1.93}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -214,7 +214,7 @@ SpriteRenderer:
   m_Size: {x: 3.74, y: 1.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!114 &123682222
@@ -233,7 +233,7 @@ MonoBehaviour:
   whatToHit:
     serializedVersion: 2
     m_Bits: 55
-  BulletTrailPrefab: {fileID: 4083993021796698, guid: 6c0c2cc9d6b9e5e439f9dee5b9324678,
+  BulletTrailPrefab: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1,
     type: 2}
   effectSpawnRate: 10
 --- !u!114 &123682223
@@ -323,6 +323,52 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185140343}
   m_CullTransparentMesh: 0
+--- !u!1001 &210022280
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.6688082
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.057225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.47286186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644605700014098, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857736233211030, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+      propertyPath: m_Name
+      value: BulletTrail
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e2ac10cd55608a48902a23647e38ca1, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &287218371
 GameObject:
   m_ObjectHideFlags: 0
