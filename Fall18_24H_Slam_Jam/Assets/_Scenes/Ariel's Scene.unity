@@ -229,9 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 5
   Damage: 10
-  notToHit:
+  whatToHit:
     serializedVersion: 2
-    m_Bits: 260
+    m_Bits: 55
 --- !u!1 &287218371
 GameObject:
   m_ObjectHideFlags: 0
