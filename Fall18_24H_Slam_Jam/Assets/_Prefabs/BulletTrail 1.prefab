@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireDirection: 50
-  moveSpeed: 10
+  moveSpeed: 40
   velocity: {x: 0, y: 0, z: 0}
 --- !u!120 &120489416852862576
 LineRenderer:
@@ -181,7 +181,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.016253153, b: 0, a: 0.59607846}
+      key0: {r: 1, g: 0.016253153, b: 0, a: 0.8901961}
       key1: {r: 1, g: 0.4481132, b: 0.46735653, a: 0.7921569}
       key2: {r: 1, g: 0, b: 0, a: 1}
       key3: {r: 0.5149074, g: 0.7869891, b: 0.8207547, a: 1}
