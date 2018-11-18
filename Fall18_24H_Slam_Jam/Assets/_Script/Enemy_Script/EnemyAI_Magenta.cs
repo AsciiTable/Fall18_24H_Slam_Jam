@@ -51,7 +51,7 @@ public class EnemyAI_Magenta : MonoBehaviour {
             transform.eulerAngles = transform.eulerAngles + new Vector3(0,0,(Random.Range(-1, 1) * targetOffset_EnemyM));
         }
 
-        if (col.gameObject.tag == "Weapon" && PlayerCollisions_M.Gun_Color == 1)
+        if (col.gameObject.tag == "Weapon")
         {
             Destroy(gameObject);
             if (PlayerCollisions_M.Magenta_Bar < PlayerCollisions_M.Magenta_Max)

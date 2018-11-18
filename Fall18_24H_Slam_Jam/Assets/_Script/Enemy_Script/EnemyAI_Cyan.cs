@@ -59,7 +59,7 @@ public class EnemyAI_Cyan : MonoBehaviour
             tran_EnemyC.Rotate(Vector3.forward * 180f);
         }
 
-        if (col.gameObject.tag == "Weapon" && PlayerCollisions_C.Gun_Color == 2)
+        if (col.gameObject.tag == "Weapon")
         {
             Destroy(gameObject);
             if (PlayerCollisions_C.Cyan_Bar < PlayerCollisions_C.Cyan_Max)

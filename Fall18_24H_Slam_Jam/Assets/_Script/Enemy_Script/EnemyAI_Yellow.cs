@@ -47,7 +47,7 @@ public class EnemyAI_Yellow : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Weapon" && PlayerCollisions_Y.Gun_Color == 2)
+        if (col.gameObject.tag == "Weapon" )
         {
             Destroy(gameObject);
             if (PlayerCollisions_Y.Yellow_Bar < PlayerCollisions_Y.Yellow_Max)

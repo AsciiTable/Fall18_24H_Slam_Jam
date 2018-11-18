@@ -76,7 +76,7 @@ public class PlayerCollisions : MonoBehaviour {
             }
         }
 
-        if(HP_Player == 0)
+        if(HP_Player <= 0)
         {
             SceneManager.LoadScene("GameOver");
         }
