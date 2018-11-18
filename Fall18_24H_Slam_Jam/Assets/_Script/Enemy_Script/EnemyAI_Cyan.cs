@@ -14,7 +14,9 @@ public class EnemyAI_Cyan : MonoBehaviour
 
     public float tearCooldown_EnemyC = 5;
     public float speed_EnemyC = 5;
+
     public PlayerCollisions PlayerCollisions_C;
+    public Enemy_WaveController Wave_C;
 
     public SpriteRenderer SpriteRenderer_C;
 
@@ -25,6 +27,9 @@ public class EnemyAI_Cyan : MonoBehaviour
         tran_EnemyC = GetComponent<Transform>();
         PlayerCollisions_C = Player.GetComponent<PlayerCollisions>();
         SpriteRenderer_C = GetComponent<SpriteRenderer>();
+
+        GameObject Spawner_C = GameObject.Find("SpawnerController");
+        Wave_C = Spawner_C.GetComponent<Enemy_WaveController>();
 
 
 
@@ -61,11 +66,14 @@ public class EnemyAI_Cyan : MonoBehaviour
 
         if (col.gameObject.tag == "Weapon")
         {
+            Wave_C.Cyans -= 1;
             Destroy(gameObject);
+            /*
             if (PlayerCollisions_C.Cyan_Bar < PlayerCollisions_C.Cyan_Max)
             {
                 PlayerCollisions_C.Cyan_Bar++;
             }
+            */
         }
     }
 

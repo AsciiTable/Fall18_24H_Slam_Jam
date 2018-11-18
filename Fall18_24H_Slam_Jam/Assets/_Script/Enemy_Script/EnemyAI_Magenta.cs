@@ -12,6 +12,7 @@ public class EnemyAI_Magenta : MonoBehaviour {
     public SpriteRenderer SpriteRenderer_M;
 
     public PlayerCollisions PlayerCollisions_M;
+    public Enemy_WaveController Wave_M;
 
 
     void Awake () {
@@ -20,6 +21,9 @@ public class EnemyAI_Magenta : MonoBehaviour {
         tran_EnemyM = GetComponent<Transform>();
         PlayerCollisions_M = GetComponent<PlayerCollisions>();
         SpriteRenderer_M = GetComponent<SpriteRenderer>();
+
+        GameObject Spawner_M = GameObject.Find("SpawnerController");
+        Wave_M = Spawner_M.GetComponent<Enemy_WaveController>();
     }
 	
 	void Update () {
@@ -53,11 +57,16 @@ public class EnemyAI_Magenta : MonoBehaviour {
 
         if (col.gameObject.tag == "Weapon")
         {
+            Wave_M.Magentas -= 1;
             Destroy(gameObject);
+
+
+            /*
             if (PlayerCollisions_M.Magenta_Bar < PlayerCollisions_M.Magenta_Max)
             {
                 PlayerCollisions_M.Magenta_Bar++;
             }
+            */
 
         }
     }

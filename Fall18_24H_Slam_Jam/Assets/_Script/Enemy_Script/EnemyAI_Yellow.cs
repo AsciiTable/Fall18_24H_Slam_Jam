@@ -44,17 +44,20 @@ public class EnemyAI_Yellow : MonoBehaviour {
             SpriteRenderer_Y.flipX = true;
         }
     }
-
+    /*
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Hit the Fish");
         if (col.gameObject.tag == "Weapon" )
         {
             Destroy(gameObject);
+            
             if (PlayerCollisions_Y.Yellow_Bar < PlayerCollisions_Y.Yellow_Max)
             {
                 PlayerCollisions_Y.Yellow_Bar++;
             }
+            
         }
     }
-
+    */
 }

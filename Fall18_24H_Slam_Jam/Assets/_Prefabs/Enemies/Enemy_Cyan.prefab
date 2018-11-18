@@ -115,9 +115,11 @@ MonoBehaviour:
     type: 2}
   deathTear_3: {fileID: 1581106344025092, guid: adbcbd5c3ac6440489923dd77c05b288,
     type: 2}
-  tearCooldown_EnemyC: 5
+  tearCooldown_EnemyC: 1
   speed_EnemyC: 5
   PlayerCollisions_C: {fileID: 0}
+  Wave_C: {fileID: 0}
+  SpriteRenderer_C: {fileID: 0}
 --- !u!212 &212078536019943944
 SpriteRenderer:
   m_ObjectHideFlags: 1

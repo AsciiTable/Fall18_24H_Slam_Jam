@@ -88,6 +88,7 @@ public class PlayerCollisions : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("Collision");
         if(col.gameObject.tag == "Deathness")
         {
             HP_Player -= 1;

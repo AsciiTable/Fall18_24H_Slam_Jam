@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61823748055764814}
   - component: {fileID: 114400630271599962}
   - component: {fileID: 114750585273740768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -39,7 +39,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4519730116862252}
   - component: {fileID: 212616264857920682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,6 +58,8 @@ GameObject:
   - component: {fileID: 50704910341915238}
   - component: {fileID: 61868586289526394}
   - component: {fileID: 114422645030356792}
+  - component: {fileID: 95001788033126296}
+  - component: {fileID: 114664293171641958}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -73,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4912939757430312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,8 +117,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983719904288712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 2.21, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4321936211422234}
   m_Father: {fileID: 0}
@@ -192,19 +194,37 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.58}
   m_SpriteTilingProperty:
-    border: {x: 4.3199997, y: 0, z: 5.5299997, w: 0.59999996}
-    pivot: {x: 0.43338418, y: 0.61127716}
-    oldSize: {x: 12.8, y: 7.55}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.2000003, y: 7.2000003}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 5.1}
   m_EdgeRadius: 0
+--- !u!95 &95001788033126296
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983719904288712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03d60ea66d38a52488e906ebac22ca62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114400630271599962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,8 +257,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigid: {fileID: 50704910341915238}
+  animator: {fileID: 95001788033126296}
   speed: 10
   facingRight: 1
+--- !u!114 &114664293171641958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983719904288712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59440d90cafd5024a99b041fcc087ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CheckpointHP_Player: 10
+  HP_Player: 6
+  isSad: 0
+  Magenta_Bar: 0
+  Cyan_Bar: 0
+  Yellow_Bar: 0
+  Magenta_Max: 20
+  Cyan_Max: 15
+  Yellow_Max: 10
+  Gun_Color: 1
+  HPText: {fileID: 0}
 --- !u!114 &114750585273740768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -284,10 +327,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 295749955
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db0e319505755ac42a77dd2184a05f56, type: 3}
+  m_Sprite: {fileID: 21300004, guid: b7ed024f41613aa40b89dbcfabeb710d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

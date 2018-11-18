@@ -73,6 +73,7 @@ public class Weapon : MonoBehaviour
 		{
 			//Debug.DrawLine(firePointPosition, hit.point, Color.red);
 			Debug.Log("We hit " + hit.collider.name + " and did " + Damage + " damage");
+            
 		}
 	}
 

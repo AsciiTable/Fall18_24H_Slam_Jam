@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_WaveController : MonoBehaviour {
-
-    public int spawnCount = 10;
     public int max_M = 4;
     public int max_C = 2;
     public int max_Y = 2;
